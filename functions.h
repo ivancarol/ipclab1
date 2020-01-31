@@ -1,0 +1,7 @@
+#ifndef FUNCTIONS_H_INCLUDED
+#define FUNCTIONS_H_INCLUDED
+
+void step1();
+
+
+#endif // FUNCTIONS_H_INCLUDED
