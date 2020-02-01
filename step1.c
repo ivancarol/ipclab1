@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 void step1(){
 
   FILE *file; //Declaration of a Pointer
@@ -29,3 +30,4 @@ void step1(){
 
     fclose(file);//End of file, It close the channel.
 }
+

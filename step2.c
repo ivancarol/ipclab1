@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 void step2(){
 
     FILE *sfile, *dfile;//Files pointers

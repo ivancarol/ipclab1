@@ -3,6 +3,7 @@
 #include<string.h>
 
 #define SIZE_OF_BUFFER 1000
+
 void step3(){
 
     FILE *sfile, *dfile; //Files pointers
@@ -49,7 +50,7 @@ void step3(){
         fputs(strToFile,dfile); //Writes the liens on the destination file
     }
 
-    printf("\nContents copied to %s with the number of chars per line", filename);
+    printf("\nContents copied to %s with the number of chars per line.", filename);
 
     fclose(sfile);
     fclose(dfile);
