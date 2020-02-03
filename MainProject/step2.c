@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(){
+void step2(){
 
     FILE *sfile, *dfile;//Files pointers
     char filename[100], c;
@@ -44,5 +44,4 @@ int main(){
     fclose(sfile); //closing of the files channels
     fclose(dfile);
 
-	return 0;
 }

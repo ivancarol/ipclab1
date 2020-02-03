@@ -3,7 +3,7 @@
 #include <string.h>
 #define SIZE_OF_BUFFER 1000
 
-int main(){
+void step4(){
 
     FILE *sfile,*dfile; ////Files pointers
     char filename[100],c;
@@ -67,7 +67,6 @@ int main(){
 
     fclose(sfile);
     fclose(dfile);
-	
-	return 0;
 
 }
+
