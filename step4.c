@@ -63,7 +63,7 @@ void step4(){
         }
         fputc('\n', dfile); //Adds the remaining \n
     }
-    printf("\nContents copied to %s with the number of chars per line.\n", filename);
+    printf("\nContents copied to %s.\n", filename);
 
     fclose(sfile);
     fclose(dfile);
