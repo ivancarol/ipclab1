@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 
 #define SIZE_OF_BUFFER 1000
 
@@ -40,10 +40,12 @@ void step3(){
         fgets (line, SIZE_OF_BUFFER, sfile); //Reads the line from source file
 
         if(line[strlen(line)-1] == '\n'){ //Checks if the last parameter is a CR.
-            itoa(strlen(line)-1,strToFile, 10); //Substring 1 to not count the CR.
+            //itoa(strlen(line)-1,strToFile, 10); //Substring 1 to not count the CR.
+            sprintf(strToFile, "%d",strlen(line)-1);
         }else{
-            itoa(strlen(line),strToFile, 10); //Int to String. The length of the string is the
+            //itoa(strlen(line),strToFile, 10); //Int to String. The length of the string is the
                                               //number of chars.
+            sprintf(strToFile, "%d",strlen(line));
         }
         strcat(strToFile," ");
         strcat(strToFile,line); //Adds the number of chars at the beginning of the line
