@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "functions.h"
 
-void step1(){
+int main(){
 
-   FILE *file; //Declaration of a Pointer
+    FILE *file; //Declaration of a Pointer
 
     char filename[100], c; //Declaration of variables
 
@@ -30,5 +30,6 @@ void step1(){
     }
 
     fclose(file);//End of file, It close the channel.
-}
 
+	return 0;
+}

@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
+//Main with a little menu to test all the steps.
+int main(){
 
-int main()
-{
     int opt;
     printf("Which step do you want to test:\n");
     printf("Options\n");
@@ -30,6 +30,14 @@ int main()
             break;
         case 3:
             step3();
+            break;
+        case 4:
+            step4();
+            break;
+        case 5:
+            step5();
+            break;
+        default:
             break;
    }
     //step1();*/

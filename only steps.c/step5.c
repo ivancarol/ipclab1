@@ -2,7 +2,7 @@
 #include <string.h>
 #include <string.h>
 
-void step5(){
+int main(){
 
     FILE *sfile, *dfile; //Files pointers
     int numChars = 0; //number of total chars in the file
@@ -49,4 +49,5 @@ void step5(){
 
     fclose(sfile);
     fclose(dfile);
+	return 0;
 }

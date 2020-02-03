@@ -15,7 +15,7 @@ void step3(){
     printf("Enter the filename to open: \n");
     scanf("%s", filename);
 
-    // Open one file for reading
+    // Opens one file for reading
     sfile = fopen(filename, "r");
     if (sfile == NULL)
     {
@@ -25,7 +25,7 @@ void step3(){
 
     strcat(filename, suff); //Adds the suffix ".OUT"
 
-    // Open another file for writing
+    // Opens another file for writing
     dfile = fopen(filename, "w");
 
     if (dfile == NULL){
@@ -33,26 +33,24 @@ void step3(){
         exit(0);
     }
 
-    // Read contents from file
+    // Reads the contents from file
 
    while(!feof(sfile)){ //While different from EOF...
 
         fgets (line, SIZE_OF_BUFFER, sfile); //Reads the line from source file
 
-        if(line[strlen(line)-1] == '\n'){ //Checks if the last parameter is a CR.
-            //itoa(strlen(line)-1,strToFile, 10); //Substring 1 to not count the CR.
-            sprintf(strToFile, "%d",strlen(line)-1);
+        if(line[strlen(line)-1] == '\n'){ //Checks if the last parameter is a \n
+            sprintf(strToFile, "%d",strlen(line)-1);//Substrings 1 to not count the \n.
         }else{
-            //itoa(strlen(line),strToFile, 10); //Int to String. The length of the string is the
-                                              //number of chars.
-            sprintf(strToFile, "%d",strlen(line));
+            sprintf(strToFile, "%d",strlen(line));//Prints the int to the string line. The length of the string is the
+                                                //number of chars.
         }
         strcat(strToFile," ");
         strcat(strToFile,line); //Adds the number of chars at the beginning of the line
         fputs(strToFile,dfile); //Writes the liens on the destination file
     }
 
-    printf("\nContents copied to %s with the number of chars per line.", filename);
+    printf("\nContents copied to %s with the number of chars per line.\n", filename);
 
     fclose(sfile);
     fclose(dfile);
